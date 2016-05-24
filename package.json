@@ -1,0 +1,16 @@
+{
+  "name": "regular-ui-overlay",
+  "description": "Regular UI - Overlay, Popover, Tooltip",
+  "version": "0.2.0",
+  "author": "Rainfore <rainforest92@126.com>",
+  "main": "./index.js",
+  "repository": "regular-ui/ui-overlay",
+  "homepage": "http://regular-ui.github.io",
+  "bugs": {"url": "http://github.com/regular-ui/ui-overlay/issues"},
+  "license": "MIT",
+  "keywords": ["regular", "ui", "overlay"],
+  "tags": ["regular", "ui", "overlay"],
+  "dependencies": {
+    "regular-ui-base": "regular-ui/ui-base#feature/v0.2"
+  }
+}

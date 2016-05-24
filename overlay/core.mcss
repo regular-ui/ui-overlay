@@ -1,0 +1,44 @@
+// Component:       `u-overlay`
+// ========================================================================
+
+.u-overlay {
+    display: inline-block;
+    position: relative;
+
+    .overlay_bd {
+        display: none;
+        position: absolute;
+        z-index: 1;
+    }
+}
+
+// Extends:
+// ========================================================================
+
+.u-overlay-bottomleft {
+    .overlay_bd {
+        top: 100%;
+        left: 0;
+    }
+}
+
+.u-overlay-bottomright {
+    .overlay_bd {
+        top: 100%;
+        right: 0;
+    }
+}
+
+.u-overlay-topleft {
+    .overlay_bd {
+        bottom: 100%;
+        left: 0;
+    }
+}
+
+.u-overlay-topright {
+    .overlay_bd {
+        bottom: 100%;
+        right: 0;
+    }
+}
