@@ -1,6 +1,6 @@
-## Overlay
+# Overlay
 
-#### 基本形式
+### 基本形式
 
 <div class="m-example"></div>
 
@@ -11,9 +11,9 @@
 </overlay>
 ```
 
-#### 触发事件
+### 触发事件
 
-#### 方向
+### 方向
 
 <div class="m-example"></div>
 
