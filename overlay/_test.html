@@ -27,13 +27,15 @@
 <![endif]-->
 </head>
 <body>
-<div class="g-top g-top-fixed">
+<div class="g-top">
     <div class="g-topc">
-        <a class="u-logo" href="./"><h1>Regular UI</h1></a>
+        <a class="u-logo" href="./">Regular UI</a>
     </div>
 </div>
-<div class="g-bd"><div class="g-bdc"><div class="g-mn">
+<div class="g-bd"><div class="g-bdc"><div class="g-mn g-mn-center">
     <article class="m-article">
+        <h1><small> Overlay</small></h1>
+        
         
     </article>
 </div>
@@ -53,6 +55,9 @@
 <script src="../js/index.js"></script>
 <script>
 var $$ = function(selector){return document.querySelectorAll(selector)};
+$$('.m-article > h2, .m-article > h3').forEach(function($heading) {
+    $heading.innerHTML = '<a href="#' + $heading.id + '">' + $heading.innerText + '</a>';
+});
 </script>
 <script>
 "use strict";
