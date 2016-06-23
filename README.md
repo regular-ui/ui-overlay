@@ -2,11 +2,9 @@
 
 Regular UI - Overlay, Popover, Tooltip
 
-## Overlay
+## Overlay（漂浮层）
 
-漂浮层
-
-Demo: http://regular-ui.github.io/ui-overlay/overlay/index.html
+- 基础示例+API: https://regular-ui.github.io/ui-overlay/overlay/index.html
 
 ## Copyright and License
 
