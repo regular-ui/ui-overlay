@@ -12,9 +12,10 @@ import template from './index.rgl';
  */
 let Overlay = Component.extend({
     name: 'overlay',
-    template: template,
+    template,
     /**
      * @protected
+     * @override
      */
     config() {
         this.data = Object.assign({
