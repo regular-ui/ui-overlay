@@ -35,7 +35,7 @@
 <div class="g-bd"><div class="g-bdc"><div class="g-mn g-mn-center">
     <article class="m-article">
         <h1><small> Overlay</small></h1>
-        <h1 id="overlay">Overlay</h1>
+        <h2 id="示例">示例</h2>
 <h3 id="基本形式">基本形式</h3>
 <div class="m-example"></div>
 
@@ -179,9 +179,18 @@
 <script src="../js/index.js"></script>
 <script>
 var $$ = function(selector){return document.querySelectorAll(selector)};
+// 添加小标题链接
 $$('.m-article > h2, .m-article > h3').forEach(function($heading) {
     $heading.innerHTML = '<a href="#' + $heading.id + '">' + $heading.innerText + '</a>';
 });
+// 在模板中添加console
+(function() {
+    var supr = RGUI.Component.prototype.config;
+    RGUI.Component.prototype.config = function() {
+        this.data.console = console;
+        return supr.call(this);
+    }
+})();
 </script>
 <script>
 "use strict";
