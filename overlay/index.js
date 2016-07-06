@@ -1,5 +1,6 @@
-import {Component, _} from 'rgui-base';
+import { Component } from 'rgui-base';
 import template from './index.rgl';
+import { dom } from 'regularjs';
 
 /**
  * @class Overlay
@@ -10,7 +11,7 @@ import template from './index.rgl';
  * @param {boolean=true}            options.data.visible             => 是否显示
  * @param {string=''}               options.data.class               => 补充class
  */
-let Overlay = Component.extend({
+const Overlay = Component.extend({
     name: 'overlay',
     template,
     /**
@@ -21,7 +22,7 @@ let Overlay = Component.extend({
         this.data = Object.assign({
             open: false,
             direction: 'bottomleft',
-            animation: 'on: enter; class: animated fadeInY fast; on: leave; class: animated fadeOutY fast;'
+            animation: 'on: enter; class: animated fadeInY fast; on: leave; class: animated fadeOutY fast;',
         }, this.data);
         this.supr();
     },
@@ -32,18 +33,18 @@ let Overlay = Component.extend({
      * @return {void}
      */
     toggle(open) {
-        if(this.data.disabled)
+        if (this.data.disabled)
             return;
 
-        if(open === undefined)
+        if (open === undefined)
             open = !this.data.open;
         this.data.open = open;
 
         // 根据状态在Overlay.opens列表中添加/删除管理项
-        let index = Overlay.opens.indexOf(this);
-        if(open && index < 0)
+        const index = Overlay.opens.indexOf(this);
+        if (open && index < 0)
             Overlay.opens.push(this);
-        else if(!open && index >= 0)
+        else if (!open && index >= 0)
             Overlay.opens.splice(index, 1);
 
         /**
@@ -53,25 +54,25 @@ let Overlay = Component.extend({
          */
         this.$emit('toggle', {
             sender: this,
-            open: open
+            open,
         });
     },
     destroy() {
-        let index = Overlay.opens.indexOf(this);
+        const index = Overlay.opens.indexOf(this);
         index >= 0 && Overlay.opens.splice(index, 1);
         this.supr();
-    }
+    },
 });
 
 // 处理点击toggle之外的地方后的收起事件。
 Overlay.opens = [];
-_.dom.on(document, 'click', (e) => {
+dom.on(document, 'click', (e) => {
     Overlay.opens.forEach((overlay, index) => {
         // 这个地方不能用stopPropagation来处理，因为展开一个overlay的同时要收起其他overlay
-        let element = overlay.$refs.element;
+        const element = overlay.$refs.element;
         let element2 = e.target;
-        while(element2) {
-            if(element === element2)
+        while (element2) {
+            if (element === element2)
                 return;
             element2 = element2.parentElement;
         }
@@ -82,12 +83,12 @@ _.dom.on(document, 'click', (e) => {
 
 Overlay.Head = Component.extend({
     name: 'overlay.head',
-    template: '<div class="overlay_hd" on-click={this.$outer.toggle()}>{#inc this.$body}</div>'
+    template: '<div class="overlay_hd" on-click={this.$outer.toggle()}>{#inc this.$body}</div>',
 });
 
 Overlay.Body = Component.extend({ //  r-animation={@(this.$outer.data.animation)}
     name: 'overlay.body',
-    template: '<div class="overlay_bd" r-show={this.$outer.data.open}>{#inc this.$body}</div>'
+    template: '<div class="overlay_bd" r-show={this.$outer.data.open}>{#inc this.$body}</div>',
 });
 
 export default Overlay;
