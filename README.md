@@ -8,16 +8,16 @@ Regular UI - Overlay, Popover, Tooltip
 [![Dependencies][david-img]][david-url]
 [![NPM Download][download-img]][download-url]
 
-[npm-img]: http://img.shields.io/npm/v/rgui-overlay.svg?style=flat-square
-[npm-url]: http://npmjs.org/package/rgui-overlay
+[npm-img]: http://img.shields.io/npm/v/rgui-ui-overlay.svg?style=flat-square
+[npm-url]: http://npmjs.org/package/rgui-ui-overlay
 [travis-img]: https://img.shields.io/travis/regular-ui/ui-overlay.svg?style=flat-square
 [travis-url]: https://travis-ci.org/regular-ui/ui-overlay
 [coveralls-img]: https://img.shields.io/coveralls/regular-ui/ui-overlay.svg?style=flat-square
 [coveralls-url]: https://coveralls.io/r/regular-ui/ui-overlay
 [david-img]: http://img.shields.io/david/regular-ui/ui-overlay.svg?style=flat-square
 [david-url]: https://david-dm.org/regular-ui/ui-overlay
-[download-img]: https://img.shields.io/npm/dm/rgui-overlay.svg?style=flat-square
-[download-url]: https://npmjs.org/package/rgui-overlay
+[download-img]: https://img.shields.io/npm/dm/rgui-ui-overlay.svg?style=flat-square
+[download-url]: https://npmjs.org/package/rgui-ui-overlay
 
 ## Overlay（漂浮层）
 
