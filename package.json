@@ -1,5 +1,5 @@
 {
-  "name": "rgui-overlay",
+  "name": "rgui-ui-overlay",
   "description": "Regular UI - Overlay, Popover, Tooltip",
   "version": "0.2.0",
   "author": "Rainfore <rainforest92@126.com>",
@@ -11,6 +11,6 @@
   "keywords": ["regular", "ui", "rgui", "overlay"],
   "tags": ["regular", "ui", "rgui", "overlay"],
   "dependencies": {
-    "rgui-base": "0.2.0-alpha.1"
+    "rgui-ui-base": "0.2.0-alpha"
   }
 }
