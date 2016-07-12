@@ -11,6 +11,6 @@
   "keywords": ["regular", "ui", "rgui", "overlay"],
   "tags": ["regular", "ui", "rgui", "overlay"],
   "dependencies": {
-    "rgui-ui-base": "0.2.0-alpha"
+    "rgui-ui-base": "0.2.0-alpha.2"
   }
 }
