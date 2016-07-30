@@ -7,6 +7,8 @@ import { dom } from 'regularjs';
  * @extend Component
  * @param {object}                  options.data                     =  绑定属性
  * @param {boolean=false}           options.data.open               <=> 当前为展开/收起状态
+ * @param {string='bottom-left'}    options.data.direction           => 展开方向
+ * @param {string='click'}          options.data.trigger             => 触发方式
  * @param {boolean=false}           options.data.disabled            => 是否禁用
  * @param {boolean=true}            options.data.visible             => 是否显示
  * @param {string=''}               options.data.class               => 补充class
@@ -21,7 +23,7 @@ const Overlay = Component.extend({
     config() {
         this.data = Object.assign({
             open: false,
-            direction: 'bottomleft',
+            direction: 'bottom-left',
             animation: 'on: enter; class: animated fadeInY fast; on: leave; class: animated fadeOutY fast;',
         }, this.data);
         this.supr();

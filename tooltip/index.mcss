@@ -1,0 +1,104 @@
+@import './core.mcss';
+
+// Variables:
+// ========================================================================
+
+$u-tooltip_background ?= #333;
+$u-tooltip_triangle_size ?= 5px;
+$u-tooltip_triangle_offset ?= 10px;
+
+// Component:       `u-tooltip`
+// ========================================================================
+
+.u-tooltip {
+    max-width: 200px;
+    padding: 4px 8px;
+    font-size: $font-size-sm;
+    background: $u-tooltip_background;
+    color: #eee;
+}
+
+// Extends:
+// ========================================================================
+
+/* top-left, top-center, top-right, bottom-left, bottom-center, bottom-right */
+
+.u-tooltip-top-left,
+.u-tooltip-top-center,
+.u-tooltip-top-right {
+    bottom: $u-tooltip_triangle_size;
+
+    &:after {
+        bottom: -$u-tooltip_triangle_size;
+        border-top: $u-tooltip_triangle_size solid $u-tooltip_background;
+        border-left: $u-tooltip_triangle_size solid transparent;
+        border-right: $u-tooltip_triangle_size solid transparent;
+    }
+}
+
+.u-tooltip-bottom-left,
+.u-tooltip-bottom-center,
+.u-tooltip-bottom-right {
+    top: $u-tooltip_triangle_size;
+
+    &:after {
+        top: -$u-tooltip_triangle_size;
+        border-bottom: $u-tooltip_triangle_size solid $u-tooltip_background;
+        border-left: $u-tooltip_triangle_size solid transparent;
+        border-right: $u-tooltip_triangle_size solid transparent;
+    }
+}
+
+.u-tooltip-top-left:after,
+.u-tooltip-bottom-left:after { left: $u-tooltip_triangle_offset; }
+
+.u-tooltip-top-center:after,
+.u-tooltip-bottom-center:after {
+    left: 50%;
+    margin-left: -$u-tooltip_triangle_size;
+}
+
+.u-tooltip-top-right:after,
+.u-tooltip-bottom-right:after { right: $u-tooltip_triangle_offset; }
+
+
+
+/* left-top, left-center, left-bottom, right-top, right-center, right-bottom */
+
+.u-tooltip-left-top,
+.u-tooltip-left-center,
+.u-tooltip-left-bottom {
+    right: $u-tooltip_triangle_size;
+
+    &:after {
+        right: -$u-tooltip_triangle_size;
+        border-left: $u-tooltip_triangle_size solid $u-tooltip_background;
+        border-top: $u-tooltip_triangle_size solid transparent;
+        border-bottom: $u-tooltip_triangle_size solid transparent;
+    }
+}
+
+.u-tooltip-right-top,
+.u-tooltip-right-center,
+.u-tooltip-right-bottom {
+    left: $u-tooltip_triangle_size;
+
+    &:after {
+        left: -$u-tooltip_triangle_size;
+        border-right: $u-tooltip_triangle_size solid $u-tooltip_background;
+        border-top: $u-tooltip_triangle_size solid transparent;
+        border-bottom: $u-tooltip_triangle_size solid transparent;
+    }
+}
+
+.u-tooltip-left-top:after,
+.u-tooltip-right-top:after { top: $u-tooltip_triangle_offset; }
+
+.u-tooltip-left-center:after,
+.u-tooltip-right-center:after {
+    top: 50%;
+    margin-top: -$u-tooltip_triangle_size;
+}
+
+.u-tooltip-left-bottom:after,
+.u-tooltip-right-bottom:after { bottom: $u-tooltip_triangle_offset; }

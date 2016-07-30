@@ -5,8 +5,8 @@
 
 ```xml
 <overlay>
-    <overlay.head><a class="u-btn">Head</a></overlay.head>
-    <overlay.body><textarea class="u-textarea">Body</textarea></overlay.body>
+    <overlay.head><a class="u-btn">head</a></overlay.head>
+    <overlay.body><textarea class="u-textarea">body</textarea></overlay.body>
 </overlay>
 ```
 
@@ -17,20 +17,20 @@
 <div class="m-example"></div>
 
 ```xml
-<overlay direction="bottomleft">
-    <overlay.head><a class="u-btn">Bottom Left (Default)</a></overlay.head>
-    <overlay.body><textarea class="u-textarea">Body</textarea></overlay.body>
+<overlay direction="bottom-left">
+    <overlay.head><a class="u-btn">bottom-left (Default)</a></overlay.head>
+    <overlay.body><textarea class="u-textarea">body</textarea></overlay.body>
 </overlay>
-<overlay direction="bottomright">
-    <overlay.head><a class="u-btn">Bottom Right</a></overlay.head>
-    <overlay.body><textarea class="u-textarea">Body</textarea></overlay.body>
+<overlay direction="bottom-right">
+    <overlay.head><a class="u-btn">bottom-right</a></overlay.head>
+    <overlay.body><textarea class="u-textarea">body</textarea></overlay.body>
 </overlay>
-<overlay direction="topleft">
-    <overlay.head><a class="u-btn">Top Left</a></overlay.head>
-    <overlay.body><textarea class="u-textarea">Body</textarea></overlay.body>
+<overlay direction="top-left">
+    <overlay.head><a class="u-btn">top-left</a></overlay.head>
+    <overlay.body><textarea class="u-textarea">body</textarea></overlay.body>
 </overlay>
-<overlay direction="topright">
-    <overlay.head><a class="u-btn">Top Right</a></overlay.head>
-    <overlay.body><textarea class="u-textarea">Body</textarea></overlay.body>
+<overlay direction="top-right">
+    <overlay.head><a class="u-btn">top-right</a></overlay.head>
+    <overlay.body><textarea class="u-textarea">body</textarea></overlay.body>
 </overlay>
 ```

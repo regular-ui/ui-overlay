@@ -1,0 +1,15 @@
+// Component:       `u-tooltip`
+// ========================================================================
+
+.u-tooltip {
+    display: inline-block;
+    position: relative;
+    $box-sizing: border-box;
+
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+    }
+}
+
