@@ -1,0 +1,140 @@
+@import './core.mcss';
+
+// Variables:
+// ========================================================================
+
+$m-popover_background ?= white;
+$m-popover_hd_background ?= #f4f4f4;
+$m-popover_border-color ?= #ccc;
+$m-popover_border-width ?= 1px;
+$m-popover_triangle_size ?= 8px;
+$m-popover_triangle_size-outer = $m-popover_triangle_size + $m-popover_border-width;
+$m-popover_triangle_offset ?= 10px;
+$m-popover_triangle_offset-outer = $m-popover_triangle_offset - $m-popover_border-width;
+
+// Component:       `m-popover`
+// ========================================================================
+
+.m-popover {
+    min-width: 240px;
+    background: white;
+    $border: $m-popover_border-width solid $m-popover_border-color;
+    $border-radius: $border-radius-base;
+    $box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+
+    &:before { border: $m-popover_triangle_size-outer solid $m-popover_border-color; }
+    &:after { border: $m-popover_triangle_size solid $m-popover_background; }
+
+    .popover_hd {
+        padding: 7px 10px;
+        background: $m-popover_hd_background;
+        border-bottom: 1px solid $m-popover_border-color;
+    }
+
+    .popover_bd {
+        padding: 7px 10px;
+    }
+}
+
+// Extends:
+// ========================================================================
+
+/* `top-left`, `top-center`, `top-right`, `bottom-left`, `bottom-center`, `bottom-right` */
+
+.m-popover-top-left,
+.m-popover-top-center,
+.m-popover-top-right {
+    bottom: $m-popover_triangle_size;
+
+    &:before, &:after {
+        border-bottom: none;
+        border-left-color: transparent;
+        border-right-color: transparent;
+    }
+
+    &:before { bottom: -$m-popover_triangle_size-outer; }
+    &:after { bottom: -$m-popover_triangle_size; }
+}
+
+.m-popover-bottom-left,
+.m-popover-bottom-center,
+.m-popover-bottom-right {
+    top: $m-popover_triangle_size-outer;
+
+    &:before, &:after {
+        border-top: none;
+        border-left-color: transparent;
+        border-right-color: transparent;
+    }
+
+    &:before { top: -$m-popover_triangle_size-outer; }
+    &:after { top: -$m-popover_triangle_size; border-bottom-color: $m-popover_hd_background; }
+}
+
+.m-popover-top-left:before,
+.m-popover-bottom-left:before { left: $m-popover_triangle_offset-outer; }
+.m-popover-top-left:after,
+.m-popover-bottom-left:after { left: $m-popover_triangle_offset; }
+
+.m-popover-top-center:before,
+.m-popover-bottom-center:before { left: 50%; margin-left: -$m-popover_triangle_size-outer; }
+.m-popover-top-center:after,
+.m-popover-bottom-center:after { left: 50%; margin-left: -$m-popover_triangle_size; }
+
+.m-popover-top-right:before,
+.m-popover-bottom-right:before { right: $m-popover_triangle_offset-outer; }
+.m-popover-top-right:after,
+.m-popover-bottom-right:after { right: $m-popover_triangle_offset; }
+
+
+
+/* `left-top`, `left-center`, `left-bottom`, `right-top`, `right-center`, `right-bottom` */
+
+.m-popover-left-top,
+.m-popover-left-center,
+.m-popover-left-bottom {
+    right: $m-popover_triangle_size;
+
+    &:before, &:after {
+        border-right: none;
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+    }
+
+    &:before { right: -$m-popover_triangle_size-outer; }
+    &:after { right: -$m-popover_triangle_size; }
+}
+
+.m-popover-right-top,
+.m-popover-right-center,
+.m-popover-right-bottom {
+    left: $m-popover_triangle_size;
+
+    &:before, &:after {
+        border-left: none;
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+    }
+
+    &:before { left: -$m-popover_triangle_size-outer; }
+    &:after { left: -$m-popover_triangle_size; }
+}
+
+.m-popover-left-top:before,
+.m-popover-right-top:before { top: $m-popover_triangle_offset-outer; }
+.m-popover-left-top:after,
+.m-popover-right-top:after {
+    top: $m-popover_triangle_offset;
+    border-left-color: $m-popover_hd_background;
+    border-right-color: $m-popover_hd_background;
+}
+
+.m-popover-left-center:before,
+.m-popover-right-center:before { top: 50%; margin-top: -$m-popover_triangle_size-outer;}
+.m-popover-left-center:after,
+.m-popover-right-center:after { top: 50%; margin-top: -$m-popover_triangle_size;}
+
+.m-popover-left-bottom:before,
+.m-popover-right-bottom:before { bottom: $m-popover_triangle_offset-outer; }
+.m-popover-left-bottom:after,
+.m-popover-right-bottom:after { bottom: $m-popover_triangle_offset; }

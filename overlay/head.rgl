@@ -1,0 +1,8 @@
+<div class="overlay_hd"
+    {#if this.$outer.data.trigger === 'click'}
+        on-click={this.$outer.toggle()}
+    {#elseif this.$outer.data.trigger === 'dblclick'}
+        on-dblclick={this.$outer.toggle()}
+    {#elseif this.$outer.data.trigger === 'hover'}
+        on-mouseenter={this.$outer.toggle()}
+    {/if}>{#inc this.$body}</div>

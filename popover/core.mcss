@@ -1,12 +1,12 @@
-// Component:       `u-tooltip`
+// Component:       `m-popover`
 // ========================================================================
 
-.u-tooltip {
+.m-popover {
     display: inline-block;
     position: relative;
     $box-sizing: border-box;
 
-    &:after {
+    &:before, &:after {
         content: '';
         display: block;
         position: absolute;

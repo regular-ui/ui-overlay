@@ -16,12 +16,14 @@ $u-tooltip_triangle_offset ?= 10px;
     font-size: $font-size-sm;
     background: $u-tooltip_background;
     color: #eee;
+
+    &:after { border: $u-tooltip_triangle_size solid $u-tooltip_background; }
 }
 
 // Extends:
 // ========================================================================
 
-/* top-left, top-center, top-right, bottom-left, bottom-center, bottom-right */
+/* `top-left`, `top-center`, `top-right`, `bottom-left`, `bottom-center`, `bottom-right` */
 
 .u-tooltip-top-left,
 .u-tooltip-top-center,
@@ -30,9 +32,9 @@ $u-tooltip_triangle_offset ?= 10px;
 
     &:after {
         bottom: -$u-tooltip_triangle_size;
-        border-top: $u-tooltip_triangle_size solid $u-tooltip_background;
-        border-left: $u-tooltip_triangle_size solid transparent;
-        border-right: $u-tooltip_triangle_size solid transparent;
+        border-bottom: none;
+        border-left-color: transparent;
+        border-right-color: transparent;
     }
 }
 
@@ -43,9 +45,9 @@ $u-tooltip_triangle_offset ?= 10px;
 
     &:after {
         top: -$u-tooltip_triangle_size;
-        border-bottom: $u-tooltip_triangle_size solid $u-tooltip_background;
-        border-left: $u-tooltip_triangle_size solid transparent;
-        border-right: $u-tooltip_triangle_size solid transparent;
+        border-top: none;
+        border-left-color: transparent;
+        border-right-color: transparent;
     }
 }
 
@@ -63,7 +65,7 @@ $u-tooltip_triangle_offset ?= 10px;
 
 
 
-/* left-top, left-center, left-bottom, right-top, right-center, right-bottom */
+/* `left-top`, `left-center`, `left-bottom`, `right-top`, `right-center`, `right-bottom` */
 
 .u-tooltip-left-top,
 .u-tooltip-left-center,
@@ -72,9 +74,9 @@ $u-tooltip_triangle_offset ?= 10px;
 
     &:after {
         right: -$u-tooltip_triangle_size;
-        border-left: $u-tooltip_triangle_size solid $u-tooltip_background;
-        border-top: $u-tooltip_triangle_size solid transparent;
-        border-bottom: $u-tooltip_triangle_size solid transparent;
+        border-right: none;
+        border-top-color: transparent;
+        border-bottom-color: transparent;
     }
 }
 
@@ -85,9 +87,9 @@ $u-tooltip_triangle_offset ?= 10px;
 
     &:after {
         left: -$u-tooltip_triangle_size;
-        border-right: $u-tooltip_triangle_size solid $u-tooltip_background;
-        border-top: $u-tooltip_triangle_size solid transparent;
-        border-bottom: $u-tooltip_triangle_size solid transparent;
+        border-left: none;
+        border-top-color: transparent;
+        border-bottom-color: transparent;
     }
 }
 

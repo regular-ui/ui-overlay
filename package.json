@@ -8,8 +8,8 @@
   "homepage": "http://regular-ui.github.io",
   "bugs": {"url": "http://github.com/regular-ui/ui-overlay/issues"},
   "license": "MIT",
-  "keywords": ["regular", "ui", "rgui", "overlay"],
-  "tags": ["regular", "ui", "rgui", "overlay"],
+  "keywords": ["regular", "ui", "rgui", "overlay", "tooltip", "popover"],
+  "tags": ["regular", "ui", "rgui", "overlay", "tooltip", "popover"],
   "dependencies": {
     "rgui-ui-base": "0.2.0-alpha.2"
   }

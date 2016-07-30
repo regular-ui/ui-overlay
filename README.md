@@ -23,6 +23,14 @@ Regular UI - Overlay, Popover, Tooltip
 
 - 基础示例+API: https://regular-ui.github.io/ui-overlay/overlay/index.html
 
+## Tooltip（工具提示）
+
+- 基础示例+API: https://regular-ui.github.io/ui-overlay/tooltip/index.html
+
+## Popover（弹出框）
+
+- 基础示例+API: https://regular-ui.github.io/ui-overlay/popover/index.html
+
 ## Copyright and License
 
 Code released under the MIT license.

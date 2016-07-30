@@ -1,5 +1,6 @@
 import { Component } from 'rgui-ui-base';
 import template from './index.rgl';
+import headTemplate from './head.rgl';
 import { dom } from 'regularjs';
 
 /**
@@ -7,8 +8,8 @@ import { dom } from 'regularjs';
  * @extend Component
  * @param {object}                  options.data                     =  绑定属性
  * @param {boolean=false}           options.data.open               <=> 当前为展开/收起状态
- * @param {string='bottom-left'}    options.data.direction           => 展开方向
- * @param {string='click'}          options.data.trigger             => 触发方式
+ * @param {string='click'}          options.data.trigger             => 触发方式。支持3种方式：`click`, `dblclick`, `hover`，默认为`click`。
+ * @param {string='bottom-left'}    options.data.direction           => 展开方向。有12种方向：`top-left`, `top-center`, `top-right`, `bottom-left`, `bottom-center`, `bottom-right`, `left-top`, `left-center`, `left-bottom`, `right-top`, `right-center`, `right-bottom`，默认为`bottom-left`。
  * @param {boolean=false}           options.data.disabled            => 是否禁用
  * @param {boolean=true}            options.data.visible             => 是否显示
  * @param {string=''}               options.data.class               => 补充class
@@ -23,6 +24,7 @@ const Overlay = Component.extend({
     config() {
         this.data = Object.assign({
             open: false,
+            trigger: 'click',
             direction: 'bottom-left',
             animation: 'on: enter; class: animated fadeInY fast; on: leave; class: animated fadeOutY fast;',
         }, this.data);
@@ -85,7 +87,7 @@ dom.on(document, 'click', (e) => {
 
 Overlay.Head = Component.extend({
     name: 'overlay.head',
-    template: '<div class="overlay_hd" on-click={this.$outer.toggle()}>{#inc this.$body}</div>',
+    template: headTemplate,
 });
 
 Overlay.Body = Component.extend({ //  r-animation={@(this.$outer.data.animation)}
