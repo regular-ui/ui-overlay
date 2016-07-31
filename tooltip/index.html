@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<!-- 该文件由rgui-tools自动生成 -->
+<meta charset="utf-8">
+<title>Regular UI - Tooltip</title>
+<meta name="author" content="Rainfore">
+<meta name="keywords" content="Regular,UI,JavaScript,Framework,MVC,MVVM">
+<meta name="description" content="Regular UI">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<link rel="icon" href="https://regular-ui.github.io/v0.2/img/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="https://regular-ui.github.io/v0.2/img/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="https://regular-ui.github.io/v0.2/css/doc.default.min.css">
+<link rel="stylesheet" href="../css/index.css">
+<!--[if lt IE9]>
+<script>
+(function() {
+    if (!
+    /*@cc_on!@*/
+    0) return;
+    var e = 'abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video'.split(', ');
+    var i= e.length;
+    while (i--)
+        document.createElement(e[i]);
+})();
+</script>
+<![endif]-->
+</head>
+<body>
+<div class="g-top">
+    <div class="g-topc">
+        <a class="u-logo" href="./">Regular UI</a>
+    </div>
+</div>
+<div class="g-bd"><div class="g-bdc"><div class="g-mn g-mn-center">
+    <article class="m-article">
+        <h1><small> Tooltip</small></h1>
+        <h2 id="示例">示例</h2>
+<h3 id="基本形式">基本形式</h3>
+<div class="m-example"></div>
+
+<pre class="lang-xml"><code><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-tooltip u-tooltip-top-left&quot;</span><span class="cm-tagcm-bracket">&gt;</span>tooltip<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tagcm-bracket">&gt;</span>
+<span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-tooltip u-tooltip-top-center&quot;</span><span class="cm-tagcm-bracket">&gt;</span>tooltip<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tagcm-bracket">&gt;</span>
+<span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-tooltip u-tooltip-top-right&quot;</span><span class="cm-tagcm-bracket">&gt;</span>tooltip<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tagcm-bracket">&gt;</span>
+<span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-tooltip u-tooltip-bottom-left&quot;</span><span class="cm-tagcm-bracket">&gt;</span>tooltip<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tagcm-bracket">&gt;</span>
+<span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-tooltip u-tooltip-bottom-center&quot;</span><span class="cm-tagcm-bracket">&gt;</span>tooltip<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tagcm-bracket">&gt;</span>
+<span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-tooltip u-tooltip-bottom-right&quot;</span><span class="cm-tagcm-bracket">&gt;</span>tooltip<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tagcm-bracket">&gt;</span>
+<span class="cm-atom">&amp;nbsp;</span>
+<span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-tooltip u-tooltip-left-top&quot;</span><span class="cm-tagcm-bracket">&gt;</span>tooltip<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tagcm-bracket">&gt;</span>
+<span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-tooltip u-tooltip-left-center&quot;</span><span class="cm-tagcm-bracket">&gt;</span>tooltip<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tagcm-bracket">&gt;</span>
+<span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-tooltip u-tooltip-left-bottom&quot;</span><span class="cm-tagcm-bracket">&gt;</span>tooltip<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tagcm-bracket">&gt;</span>
+<span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-tooltip u-tooltip-right-top&quot;</span><span class="cm-tagcm-bracket">&gt;</span>tooltip<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tagcm-bracket">&gt;</span>
+<span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-tooltip u-tooltip-right-center&quot;</span><span class="cm-tagcm-bracket">&gt;</span>tooltip<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tagcm-bracket">&gt;</span>
+<span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-tooltip u-tooltip-right-bottom&quot;</span><span class="cm-tagcm-bracket">&gt;</span>tooltip<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tagcm-bracket">&gt;</span>
+</code></pre>
+<h3 id="与overlay结合">与Overlay结合</h3>
+<div class="m-example"></div>
+
+<pre class="lang-xml"><code><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay</span> <span class="cm-attribute">trigger</span>=<span class="cm-string">&quot;hover&quot;</span> <span class="cm-attribute">direction</span>=<span class="cm-string">&quot;top-left&quot;</span><span class="cm-tagcm-bracket">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay.head</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-btn&quot;</span><span class="cm-tagcm-bracket">&gt;</span>top-left<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">overlay.head</span><span class="cm-tagcm-bracket">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay.body</span><span class="cm-tagcm-bracket">&gt;</span>
+        <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-tooltip u-tooltip-top-left&quot;</span><span class="cm-tagcm-bracket">&gt;</span>tooltip<span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">br</span><span class="cm-tagcm-bracket">&gt;</span>more<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tagcm-error">div</span><span class="cm-tagcm-bracketcm-error">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tagcm-error">overlay.body</span><span class="cm-tagcm-bracketcm-error">&gt;</span>
+<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tagcm-error">overlay</span><span class="cm-tagcm-bracketcm-error">&gt;</span>
+<span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay</span> <span class="cm-attribute">trigger</span>=<span class="cm-string">&quot;hover&quot;</span> <span class="cm-attribute">direction</span>=<span class="cm-string">&quot;top-center&quot;</span><span class="cm-tagcm-bracket">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay.head</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-btn&quot;</span><span class="cm-tagcm-bracket">&gt;</span>top-center<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">overlay.head</span><span class="cm-tagcm-bracket">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay.body</span><span class="cm-tagcm-bracket">&gt;</span>
+        <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-tooltip u-tooltip-top-center&quot;</span><span class="cm-tagcm-bracket">&gt;</span>tooltip<span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">br</span><span class="cm-tagcm-bracket">&gt;</span>more<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tagcm-error">div</span><span class="cm-tagcm-bracketcm-error">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tagcm-error">overlay.body</span><span class="cm-tagcm-bracketcm-error">&gt;</span>
+<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tagcm-error">overlay</span><span class="cm-tagcm-bracketcm-error">&gt;</span>
+<span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay</span> <span class="cm-attribute">trigger</span>=<span class="cm-string">&quot;hover&quot;</span> <span class="cm-attribute">direction</span>=<span class="cm-string">&quot;top-right&quot;</span><span class="cm-tagcm-bracket">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay.head</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-btn&quot;</span><span class="cm-tagcm-bracket">&gt;</span>top-right<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">overlay.head</span><span class="cm-tagcm-bracket">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay.body</span><span class="cm-tagcm-bracket">&gt;</span>
+        <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-tooltip u-tooltip-top-right&quot;</span><span class="cm-tagcm-bracket">&gt;</span>tooltip<span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">br</span><span class="cm-tagcm-bracket">&gt;</span>more<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tagcm-error">div</span><span class="cm-tagcm-bracketcm-error">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tagcm-error">overlay.body</span><span class="cm-tagcm-bracketcm-error">&gt;</span>
+<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tagcm-error">overlay</span><span class="cm-tagcm-bracketcm-error">&gt;</span>
+<span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay</span> <span class="cm-attribute">trigger</span>=<span class="cm-string">&quot;hover&quot;</span> <span class="cm-attribute">direction</span>=<span class="cm-string">&quot;bottom-left&quot;</span><span class="cm-tagcm-bracket">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay.head</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-btn&quot;</span><span class="cm-tagcm-bracket">&gt;</span>bottom-left<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">overlay.head</span><span class="cm-tagcm-bracket">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay.body</span><span class="cm-tagcm-bracket">&gt;</span>
+        <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-tooltip u-tooltip-bottom-left&quot;</span><span class="cm-tagcm-bracket">&gt;</span>tooltip<span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">br</span><span class="cm-tagcm-bracket">&gt;</span>more<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tagcm-error">div</span><span class="cm-tagcm-bracketcm-error">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tagcm-error">overlay.body</span><span class="cm-tagcm-bracketcm-error">&gt;</span>
+<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tagcm-error">overlay</span><span class="cm-tagcm-bracketcm-error">&gt;</span>
+<span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay</span> <span class="cm-attribute">trigger</span>=<span class="cm-string">&quot;hover&quot;</span> <span class="cm-attribute">direction</span>=<span class="cm-string">&quot;bottom-center&quot;</span><span class="cm-tagcm-bracket">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay.head</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-btn&quot;</span><span class="cm-tagcm-bracket">&gt;</span>bottom-center<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">overlay.head</span><span class="cm-tagcm-bracket">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay.body</span><span class="cm-tagcm-bracket">&gt;</span>
+        <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-tooltip u-tooltip-bottom-center&quot;</span><span class="cm-tagcm-bracket">&gt;</span>tooltip<span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">br</span><span class="cm-tagcm-bracket">&gt;</span>more<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tagcm-error">div</span><span class="cm-tagcm-bracketcm-error">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tagcm-error">overlay.body</span><span class="cm-tagcm-bracketcm-error">&gt;</span>
+<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tagcm-error">overlay</span><span class="cm-tagcm-bracketcm-error">&gt;</span>
+<span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay</span> <span class="cm-attribute">trigger</span>=<span class="cm-string">&quot;hover&quot;</span> <span class="cm-attribute">direction</span>=<span class="cm-string">&quot;bottom-right&quot;</span><span class="cm-tagcm-bracket">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay.head</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-btn&quot;</span><span class="cm-tagcm-bracket">&gt;</span>bottom-right<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">overlay.head</span><span class="cm-tagcm-bracket">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay.body</span><span class="cm-tagcm-bracket">&gt;</span>
+        <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-tooltip u-tooltip-bottom-right&quot;</span><span class="cm-tagcm-bracket">&gt;</span>tooltip<span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">br</span><span class="cm-tagcm-bracket">&gt;</span>more<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tagcm-error">div</span><span class="cm-tagcm-bracketcm-error">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tagcm-error">overlay.body</span><span class="cm-tagcm-bracketcm-error">&gt;</span>
+<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tagcm-error">overlay</span><span class="cm-tagcm-bracketcm-error">&gt;</span>
+<span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tagcm-bracket">&gt;</span>
+<span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay</span> <span class="cm-attribute">trigger</span>=<span class="cm-string">&quot;hover&quot;</span> <span class="cm-attribute">direction</span>=<span class="cm-string">&quot;left-top&quot;</span><span class="cm-tagcm-bracket">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay.head</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-btn&quot;</span><span class="cm-tagcm-bracket">&gt;</span>left-top<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">overlay.head</span><span class="cm-tagcm-bracket">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay.body</span><span class="cm-tagcm-bracket">&gt;</span>
+        <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-tooltip u-tooltip-left-top&quot;</span><span class="cm-tagcm-bracket">&gt;</span>tooltip<span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">br</span><span class="cm-tagcm-bracket">&gt;</span>more<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tagcm-error">div</span><span class="cm-tagcm-bracketcm-error">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tagcm-error">overlay.body</span><span class="cm-tagcm-bracketcm-error">&gt;</span>
+<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tagcm-error">overlay</span><span class="cm-tagcm-bracketcm-error">&gt;</span>
+<span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay</span> <span class="cm-attribute">trigger</span>=<span class="cm-string">&quot;hover&quot;</span> <span class="cm-attribute">direction</span>=<span class="cm-string">&quot;left-center&quot;</span><span class="cm-tagcm-bracket">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay.head</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-btn&quot;</span><span class="cm-tagcm-bracket">&gt;</span>left-center<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">overlay.head</span><span class="cm-tagcm-bracket">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay.body</span><span class="cm-tagcm-bracket">&gt;</span>
+        <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-tooltip u-tooltip-left-center&quot;</span><span class="cm-tagcm-bracket">&gt;</span>tooltip<span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">br</span><span class="cm-tagcm-bracket">&gt;</span>more<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tagcm-error">div</span><span class="cm-tagcm-bracketcm-error">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tagcm-error">overlay.body</span><span class="cm-tagcm-bracketcm-error">&gt;</span>
+<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tagcm-error">overlay</span><span class="cm-tagcm-bracketcm-error">&gt;</span>
+<span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay</span> <span class="cm-attribute">trigger</span>=<span class="cm-string">&quot;hover&quot;</span> <span class="cm-attribute">direction</span>=<span class="cm-string">&quot;left-bottom&quot;</span><span class="cm-tagcm-bracket">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay.head</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-btn&quot;</span><span class="cm-tagcm-bracket">&gt;</span>left-bottom<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">overlay.head</span><span class="cm-tagcm-bracket">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay.body</span><span class="cm-tagcm-bracket">&gt;</span>
+        <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-tooltip u-tooltip-left-bottom&quot;</span><span class="cm-tagcm-bracket">&gt;</span>tooltip<span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">br</span><span class="cm-tagcm-bracket">&gt;</span>more<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tagcm-error">div</span><span class="cm-tagcm-bracketcm-error">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tagcm-error">overlay.body</span><span class="cm-tagcm-bracketcm-error">&gt;</span>
+<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tagcm-error">overlay</span><span class="cm-tagcm-bracketcm-error">&gt;</span>
+<span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay</span> <span class="cm-attribute">trigger</span>=<span class="cm-string">&quot;hover&quot;</span> <span class="cm-attribute">direction</span>=<span class="cm-string">&quot;right-top&quot;</span><span class="cm-tagcm-bracket">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay.head</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-btn&quot;</span><span class="cm-tagcm-bracket">&gt;</span>right-top<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">overlay.head</span><span class="cm-tagcm-bracket">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay.body</span><span class="cm-tagcm-bracket">&gt;</span>
+        <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-tooltip u-tooltip-right-top&quot;</span><span class="cm-tagcm-bracket">&gt;</span>tooltip<span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">br</span><span class="cm-tagcm-bracket">&gt;</span>more<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tagcm-error">div</span><span class="cm-tagcm-bracketcm-error">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tagcm-error">overlay.body</span><span class="cm-tagcm-bracketcm-error">&gt;</span>
+<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tagcm-error">overlay</span><span class="cm-tagcm-bracketcm-error">&gt;</span>
+<span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay</span> <span class="cm-attribute">trigger</span>=<span class="cm-string">&quot;hover&quot;</span> <span class="cm-attribute">direction</span>=<span class="cm-string">&quot;right-center&quot;</span><span class="cm-tagcm-bracket">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay.head</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-btn&quot;</span><span class="cm-tagcm-bracket">&gt;</span>right-center<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">overlay.head</span><span class="cm-tagcm-bracket">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay.body</span><span class="cm-tagcm-bracket">&gt;</span>
+        <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-tooltip u-tooltip-right-center&quot;</span><span class="cm-tagcm-bracket">&gt;</span>tooltip<span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">br</span><span class="cm-tagcm-bracket">&gt;</span>more<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tagcm-error">div</span><span class="cm-tagcm-bracketcm-error">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tagcm-error">overlay.body</span><span class="cm-tagcm-bracketcm-error">&gt;</span>
+<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tagcm-error">overlay</span><span class="cm-tagcm-bracketcm-error">&gt;</span>
+<span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay</span> <span class="cm-attribute">trigger</span>=<span class="cm-string">&quot;hover&quot;</span> <span class="cm-attribute">direction</span>=<span class="cm-string">&quot;right-bottom&quot;</span><span class="cm-tagcm-bracket">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay.head</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-btn&quot;</span><span class="cm-tagcm-bracket">&gt;</span>right-bottom<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">overlay.head</span><span class="cm-tagcm-bracket">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay.body</span><span class="cm-tagcm-bracket">&gt;</span>
+        <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-tooltip u-tooltip-right-bottom&quot;</span><span class="cm-tagcm-bracket">&gt;</span>tooltip<span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">br</span><span class="cm-tagcm-bracket">&gt;</span>more<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tagcm-error">div</span><span class="cm-tagcm-bracketcm-error">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tagcm-error">overlay.body</span><span class="cm-tagcm-bracketcm-error">&gt;</span>
+<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tagcm-error">overlay</span><span class="cm-tagcm-bracketcm-error">&gt;</span>
+</code></pre>
+
+        
+    </article>
+</div>
+</div></div><div class="g-ft">
+    <footer class="m-footer">
+        <p><a href="https://regular-ui.github.io/v0.2/" class="footer_logo"><img src="https://regular-ui.github.io/v0.2/img/logo-v2.0-bg-48.png" /></p>
+        <p>
+            <a href="https://github.com/regular-ui/regular-ui" target="_blank">GitHub</a> |
+            <a href="https://github.com/regular-ui/regular-ui/issues" target="_blank">Issues</a> |
+            <a href="https://github.com/regular-ui/regular-ui/releases" target="_blank">ChangeLog</a> |
+            <a href="https://github.com/regular-ui/regular-ui/blob/master/CONTRIBUTING.md" target="_blank">Contributing</a>
+        </p>
+        <p>Licensed under <a href="https://github.com/regular-ui/regular-ui/blob/master/LICENSE" target="_blank">MIT license</a>.</p>
+    </footer>
+</div>
+<script src="https://regular-ui.github.io/v0.2/vendor/polyfill.min.js"></script>
+<script src="https://regular-ui.github.io/v0.2/vendor/regular.min.js"></script>
+<script src="../js/index.js"></script>
+<script src="https://regular-ui.github.io/v0.2/js/helper.js"></script>
+<script>
+"use strict";
+
+var index = 0;
+(function (index) {
+    var template = "<div class=\"u-tooltip u-tooltip-top-left\">tooltip</div>\n<div class=\"u-tooltip u-tooltip-top-center\">tooltip</div>\n<div class=\"u-tooltip u-tooltip-top-right\">tooltip</div>\n<div class=\"u-tooltip u-tooltip-bottom-left\">tooltip</div>\n<div class=\"u-tooltip u-tooltip-bottom-center\">tooltip</div>\n<div class=\"u-tooltip u-tooltip-bottom-right\">tooltip</div>\n&nbsp;\n<div class=\"u-tooltip u-tooltip-left-top\">tooltip</div>\n<div class=\"u-tooltip u-tooltip-left-center\">tooltip</div>\n<div class=\"u-tooltip u-tooltip-left-bottom\">tooltip</div>\n<div class=\"u-tooltip u-tooltip-right-top\">tooltip</div>\n<div class=\"u-tooltip u-tooltip-right-center\">tooltip</div>\n<div class=\"u-tooltip u-tooltip-right-bottom\">tooltip</div>";
+    var component = new RGUI.Component({
+        template: template
+    });
+    component && component.$inject($$(".m-example")[index]);
+})(index++);
+(function (index) {
+    var template = "<overlay trigger=\"hover\" direction=\"top-left\">\n    <overlay.head><a class=\"u-btn\">top-left</a></overlay.head>\n    <overlay.body>\n        <div class=\"u-tooltip u-tooltip-top-left\">tooltip<br>more</div>\n    </overlay.body>\n</overlay>\n<overlay trigger=\"hover\" direction=\"top-center\">\n    <overlay.head><a class=\"u-btn\">top-center</a></overlay.head>\n    <overlay.body>\n        <div class=\"u-tooltip u-tooltip-top-center\">tooltip<br>more</div>\n    </overlay.body>\n</overlay>\n<overlay trigger=\"hover\" direction=\"top-right\">\n    <overlay.head><a class=\"u-btn\">top-right</a></overlay.head>\n    <overlay.body>\n        <div class=\"u-tooltip u-tooltip-top-right\">tooltip<br>more</div>\n    </overlay.body>\n</overlay>\n<overlay trigger=\"hover\" direction=\"bottom-left\">\n    <overlay.head><a class=\"u-btn\">bottom-left</a></overlay.head>\n    <overlay.body>\n        <div class=\"u-tooltip u-tooltip-bottom-left\">tooltip<br>more</div>\n    </overlay.body>\n</overlay>\n<overlay trigger=\"hover\" direction=\"bottom-center\">\n    <overlay.head><a class=\"u-btn\">bottom-center</a></overlay.head>\n    <overlay.body>\n        <div class=\"u-tooltip u-tooltip-bottom-center\">tooltip<br>more</div>\n    </overlay.body>\n</overlay>\n<overlay trigger=\"hover\" direction=\"bottom-right\">\n    <overlay.head><a class=\"u-btn\">bottom-right</a></overlay.head>\n    <overlay.body>\n        <div class=\"u-tooltip u-tooltip-bottom-right\">tooltip<br>more</div>\n    </overlay.body>\n</overlay>\n<p></p>\n<overlay trigger=\"hover\" direction=\"left-top\">\n    <overlay.head><a class=\"u-btn\">left-top</a></overlay.head>\n    <overlay.body>\n        <div class=\"u-tooltip u-tooltip-left-top\">tooltip<br>more</div>\n    </overlay.body>\n</overlay>\n<overlay trigger=\"hover\" direction=\"left-center\">\n    <overlay.head><a class=\"u-btn\">left-center</a></overlay.head>\n    <overlay.body>\n        <div class=\"u-tooltip u-tooltip-left-center\">tooltip<br>more</div>\n    </overlay.body>\n</overlay>\n<overlay trigger=\"hover\" direction=\"left-bottom\">\n    <overlay.head><a class=\"u-btn\">left-bottom</a></overlay.head>\n    <overlay.body>\n        <div class=\"u-tooltip u-tooltip-left-bottom\">tooltip<br>more</div>\n    </overlay.body>\n</overlay>\n<overlay trigger=\"hover\" direction=\"right-top\">\n    <overlay.head><a class=\"u-btn\">right-top</a></overlay.head>\n    <overlay.body>\n        <div class=\"u-tooltip u-tooltip-right-top\">tooltip<br>more</div>\n    </overlay.body>\n</overlay>\n<overlay trigger=\"hover\" direction=\"right-center\">\n    <overlay.head><a class=\"u-btn\">right-center</a></overlay.head>\n    <overlay.body>\n        <div class=\"u-tooltip u-tooltip-right-center\">tooltip<br>more</div>\n    </overlay.body>\n</overlay>\n<overlay trigger=\"hover\" direction=\"right-bottom\">\n    <overlay.head><a class=\"u-btn\">right-bottom</a></overlay.head>\n    <overlay.body>\n        <div class=\"u-tooltip u-tooltip-right-bottom\">tooltip<br>more</div>\n    </overlay.body>\n</overlay>";
+    var component = new RGUI.Component({
+        template: template
+    });
+    component && component.$inject($$(".m-example")[index]);
+})(index++);
+</script>
+</body>
+</html>
