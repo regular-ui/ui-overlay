@@ -1,6 +1,27 @@
+@-webkit-keyframes fa-spin{
+	0%{
+		-webkit-transform:rotate(0deg);
+		transform:rotate(0deg);
+	}
+	100%{
+		-webkit-transform:rotate(359deg);
+		transform:rotate(359deg);
+	}
+}
+@keyframes fa-spin{
+	0%{
+		-webkit-transform:rotate(0deg);
+		transform:rotate(0deg);
+	}
+	100%{
+		-webkit-transform:rotate(359deg);
+		transform:rotate(359deg);
+	}
+}
 .u-overlay{
 	display:inline-block;
 	position:relative;
+	vertical-align:middle;
 }
 .u-overlay .overlay_bd{
 	display:none;

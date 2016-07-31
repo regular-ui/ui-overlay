@@ -60,7 +60,7 @@
     <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay.body</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">textarea</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-textarea&quot;</span><span class="cm-tagcm-bracket">&gt;</span>body<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">textarea</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">overlay.body</span><span class="cm-tagcm-bracket">&gt;</span>
 <span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">overlay</span><span class="cm-tagcm-bracket">&gt;</span>
 </code></pre>
-<h3 id="方向">方向</h3>
+<h3 id="展开方向">展开方向</h3>
 <div class="m-example"></div>
 
 <pre class="lang-xml"><code><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay</span> <span class="cm-attribute">direction</span>=<span class="cm-string">&quot;top-left&quot;</span><span class="cm-tagcm-bracket">&gt;</span>
@@ -117,7 +117,7 @@
 <div class="m-example"></div>
 
 <pre class="lang-xml"><code><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay</span> <span class="cm-attribute">open</span>=<span class="cm-attribute">{open}</span><span class="cm-tagcm-bracketcm-error">&gt;</span>
-    <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay.head</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-btn&quot;</span> <span class="cm-attribute">r-class</span>=<span class="cm-attribute">{</span> <span class="cm-attribute">{</span><span class="cm-stringcm-error">&#39;z-act&#39;</span><span class="cm-attribute">:</span> <span class="cm-attribute">open}</span> <span class="cm-attribute">}</span><span class="cm-tagcm-bracketcm-error">&gt;</span>{open ? &#39;展开&#39; : &#39;收起&#39;}<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">overlay.head</span><span class="cm-tagcm-bracket">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay.head</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-btn u-btn-info&quot;</span> <span class="cm-attribute">r-class</span>=<span class="cm-attribute">{</span> <span class="cm-attribute">{</span><span class="cm-stringcm-error">&#39;z-act&#39;</span><span class="cm-attribute">:</span> <span class="cm-attribute">open}</span> <span class="cm-attribute">}</span><span class="cm-tagcm-bracketcm-error">&gt;</span>{open ? &#39;展开&#39; : &#39;收起&#39;}<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">overlay.head</span><span class="cm-tagcm-bracket">&gt;</span>
     <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay.body</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">textarea</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-textarea&quot;</span><span class="cm-tagcm-bracket">&gt;</span>body<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">textarea</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">overlay.body</span><span class="cm-tagcm-bracket">&gt;</span>
 <span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">overlay</span><span class="cm-tagcm-bracket">&gt;</span>
 </code></pre>
@@ -128,7 +128,7 @@
 <pre class="lang-xml"><code><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay</span>
     <span class="cm-attribute">on-toggle</span>=<span class="cm-attribute">{console.log(</span><span class="cm-stringcm-error">&#39;on-toggle:&#39;</span><span class="cm-attribute">,</span> <span class="cm-stringcm-error">&#39;$event.open:&#39;</span><span class="cm-attribute">,</span> <span class="cm-attribute">$event.open)}</span>
     <span class="cm-attribute">on-change</span>=<span class="cm-attribute">{console.log(</span><span class="cm-stringcm-error">&#39;on-change:&#39;</span><span class="cm-attribute">,</span> <span class="cm-stringcm-error">&#39;$event.open:&#39;</span><span class="cm-attribute">,</span> <span class="cm-attribute">$event.open)}</span><span class="cm-tagcm-bracketcm-error">&gt;</span>
-    <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay.head</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-btn&quot;</span><span class="cm-tagcm-bracket">&gt;</span>head<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">overlay.head</span><span class="cm-tagcm-bracket">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay.head</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-btn u-btn-primary&quot;</span><span class="cm-tagcm-bracket">&gt;</span>head<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">overlay.head</span><span class="cm-tagcm-bracket">&gt;</span>
     <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay.body</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">textarea</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-textarea&quot;</span><span class="cm-tagcm-bracket">&gt;</span>body<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">textarea</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">overlay.body</span><span class="cm-tagcm-bracket">&gt;</span>
 <span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">overlay</span><span class="cm-tagcm-bracket">&gt;</span>
 </code></pre>
@@ -224,7 +224,7 @@
                 
                 <tr><td class="f-wsn"><code>trigger</code></td><td class="f-wsn">string</td><td class="f-wsn">触发方式</td></tr>
                 
-                <tr><td class="f-wsn"><code>direction</code></td><td class="f-wsn">string</td><td class="f-wsn">触发方式</td></tr>
+                <tr><td class="f-wsn"><code>direction</code></td><td class="f-wsn">string</td><td class="f-wsn">展开方向</td></tr>
                 
             
         </tbody>
@@ -246,7 +246,7 @@
                 
                 <tr><td class="f-wsn"><code>trigger</code></td><td class="f-wsn">string</td><td class="f-wsn">触发方式</td></tr>
                 
-                <tr><td class="f-wsn"><code>direction</code></td><td class="f-wsn">string</td><td class="f-wsn">触发方式</td></tr>
+                <tr><td class="f-wsn"><code>direction</code></td><td class="f-wsn">string</td><td class="f-wsn">展开方向</td></tr>
                 
             
         </tbody>
@@ -302,14 +302,14 @@ var index = 0;
     component && component.$inject($$(".m-example")[index]);
 })(index++);
 (function (index) {
-    var template = "<overlay open={open}>\n    <overlay.head><a class=\"u-btn\" r-class={ {'z-act': open} }>{open ? '展开' : '收起'}</a></overlay.head>\n    <overlay.body><textarea class=\"u-textarea\">body</textarea></overlay.body>\n</overlay>";
+    var template = "<overlay open={open}>\n    <overlay.head><a class=\"u-btn u-btn-info\" r-class={ {'z-act': open} }>{open ? '展开' : '收起'}</a></overlay.head>\n    <overlay.body><textarea class=\"u-textarea\">body</textarea></overlay.body>\n</overlay>";
     var component = new RGUI.Component({
         template: template
     });
     component && component.$inject($$(".m-example")[index]);
 })(index++);
 (function (index) {
-    var template = "<overlay\n    on-toggle={console.log('on-toggle:', '$event.open:', $event.open)}\n    on-change={console.log('on-change:', '$event.open:', $event.open)}>\n    <overlay.head><a class=\"u-btn\">head</a></overlay.head>\n    <overlay.body><textarea class=\"u-textarea\">body</textarea></overlay.body>\n</overlay>";
+    var template = "<overlay\n    on-toggle={console.log('on-toggle:', '$event.open:', $event.open)}\n    on-change={console.log('on-change:', '$event.open:', $event.open)}>\n    <overlay.head><a class=\"u-btn u-btn-primary\">head</a></overlay.head>\n    <overlay.body><textarea class=\"u-textarea\">body</textarea></overlay.body>\n</overlay>";
     var component = new RGUI.Component({
         template: template
     });
