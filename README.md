@@ -27,7 +27,7 @@ Regular UI - Overlay, Popover, Tooltip
 
 - 基础示例+API: https://regular-ui.github.io/ui-overlay/tooltip/index.html
 
-## Popover（弹出框）
+## Popover（气泡卡片）
 
 - 基础示例+API: https://regular-ui.github.io/ui-overlay/popover/index.html
 
