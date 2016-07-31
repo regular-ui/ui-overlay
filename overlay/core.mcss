@@ -4,6 +4,7 @@
 .u-overlay {
     display: inline-block;
     position: relative;
+    vertical-align: middle;
 
     .overlay_bd {
         display: none;

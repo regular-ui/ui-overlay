@@ -50,7 +50,7 @@ const Overlay = Component.extend({
              * @property {object} sender 事件发送对象
              * @property {boolean} open 改变后的状态
              * @property {string} trigger 触发方式
-             * @property {string} direction 触发方式
+             * @property {string} direction 展开方向
              */
             this.$emit('change', {
                 sender: this,
@@ -88,7 +88,7 @@ const Overlay = Component.extend({
          * @property {object} sender 事件发送对象
          * @property {boolean} open 展开/收起状态
          * @property {string} trigger 触发方式
-         * @property {string} direction 触发方式
+         * @property {string} direction 展开方向
          */
         this.$emit('toggle', {
             sender: this,

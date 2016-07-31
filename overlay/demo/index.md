@@ -29,7 +29,7 @@
 </overlay>
 ```
 
-### 方向
+### 展开方向
 
 <div class="m-example"></div>
 
@@ -91,7 +91,7 @@
 
 ```xml
 <overlay open={open}>
-    <overlay.head><a class="u-btn" r-class={ {'z-act': open} }>{open ? '展开' : '收起'}</a></overlay.head>
+    <overlay.head><a class="u-btn u-btn-info" r-class={ {'z-act': open} }>{open ? '展开' : '收起'}</a></overlay.head>
     <overlay.body><textarea class="u-textarea">body</textarea></overlay.body>
 </overlay>
 ```
@@ -106,7 +106,7 @@
 <overlay
     on-toggle={console.log('on-toggle:', '$event.open:', $event.open)}
     on-change={console.log('on-change:', '$event.open:', $event.open)}>
-    <overlay.head><a class="u-btn">head</a></overlay.head>
+    <overlay.head><a class="u-btn u-btn-primary">head</a></overlay.head>
     <overlay.body><textarea class="u-textarea">body</textarea></overlay.body>
 </overlay>
 ```

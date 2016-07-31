@@ -4,5 +4,5 @@
     {#elseif this.$outer.data.trigger === 'dblclick'}
         on-dblclick={this.$outer.toggle()}
     {#elseif this.$outer.data.trigger === 'hover'}
-        on-mouseenter={this.$outer.toggle()}
+        on-mouseenter={this.$outer.toggle(true)}
     {/if}>{#inc this.$body}</div>

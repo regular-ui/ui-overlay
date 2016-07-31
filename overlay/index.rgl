@@ -1,4 +1,4 @@
 <div class="u-overlay u-overlay-{direction} {class}" z-dis={disabled} r-hide={!visible} ref="element"
-    {#if trigger === 'hover'}on-mouseleave={this.toggle()}{/if}>
+    {#if trigger === 'hover'}on-mouseleave={this.toggle(false)}{/if}>
     {#inc this.$body}
 </div>
