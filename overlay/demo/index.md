@@ -84,3 +84,29 @@
     <overlay.body><textarea class="u-textarea">body</textarea></overlay.body>
 </overlay>
 ```
+
+### 数据绑定
+
+<div class="m-example"></div>
+
+```xml
+<overlay open={open}>
+    <overlay.head><a class="u-btn" r-class={ {'z-act': open} }>{open ? '展开' : '收起'}</a></overlay.head>
+    <overlay.body><textarea class="u-textarea">body</textarea></overlay.body>
+</overlay>
+```
+
+### 事件
+
+请打开浏览器的控制台查看结果。
+
+<div class="m-example"></div>
+
+```xml
+<overlay
+    on-toggle={console.log('on-toggle:', '$event.open:', $event.open)}
+    on-change={console.log('on-change:', '$event.open:', $event.open)}>
+    <overlay.head><a class="u-btn">head</a></overlay.head>
+    <overlay.body><textarea class="u-textarea">body</textarea></overlay.body>
+</overlay>
+```

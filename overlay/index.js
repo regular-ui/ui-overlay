@@ -1,6 +1,7 @@
 import { Component } from 'rgui-ui-base';
 import template from './index.rgl';
 import headTemplate from './head.rgl';
+import bodyTemplate from './body.rgl';
 import { dom } from 'regularjs';
 
 /**
@@ -26,8 +27,46 @@ const Overlay = Component.extend({
             open: false,
             trigger: 'click',
             direction: 'bottom-left',
-            animation: 'on: enter; class: animated fadeInY fast; on: leave; class: animated fadeOutY fast;',
+            // @TODO animation: 'on: enter; class: animated fadeInY fast; on: leave; class: animated fadeOutY fast;',
         }, this.data);
+        this.supr();
+        this.watch();
+    },
+    /**
+     * @protected
+     * @override
+     */
+    watch() {
+        this.$watch('open', (newValue, oldValue) => {
+            // 根据状态在Overlay.opens列表中添加/删除管理项
+            const index = Overlay.opens.indexOf(this);
+            if (newValue && index < 0)
+                Overlay.opens.push(this);
+            else if (!newValue && index >= 0)
+                Overlay.opens.splice(index, 1);
+
+            /**
+             * @event change 展开/收起状态改变时触发
+             * @property {object} sender 事件发送对象
+             * @property {boolean} open 改变后的状态
+             * @property {string} trigger 触发方式
+             * @property {string} direction 触发方式
+             */
+            this.$emit('change', {
+                sender: this,
+                open: newValue,
+                trigger: this.data.trigger,
+                direction: this.data.direction,
+            });
+        });
+    },
+    /**
+     * @protected
+     * @override
+     */
+    destroy() {
+        const index = Overlay.opens.indexOf(this);
+        index >= 0 && Overlay.opens.splice(index, 1);
         this.supr();
     },
     /**
@@ -44,27 +83,19 @@ const Overlay = Component.extend({
             open = !this.data.open;
         this.data.open = open;
 
-        // 根据状态在Overlay.opens列表中添加/删除管理项
-        const index = Overlay.opens.indexOf(this);
-        if (open && index < 0)
-            Overlay.opens.push(this);
-        else if (!open && index >= 0)
-            Overlay.opens.splice(index, 1);
-
         /**
-         * @event toggle  展开/收起时触发
+         * @event toggle 展开/收起时触发
          * @property {object} sender 事件发送对象
-         * @property {object} open 展开/收起状态
+         * @property {boolean} open 展开/收起状态
+         * @property {string} trigger 触发方式
+         * @property {string} direction 触发方式
          */
         this.$emit('toggle', {
             sender: this,
             open,
+            trigger: this.data.trigger,
+            direction: this.data.direction,
         });
-    },
-    destroy() {
-        const index = Overlay.opens.indexOf(this);
-        index >= 0 && Overlay.opens.splice(index, 1);
-        this.supr();
     },
 });
 
@@ -90,9 +121,9 @@ Overlay.Head = Component.extend({
     template: headTemplate,
 });
 
-Overlay.Body = Component.extend({ //  r-animation={@(this.$outer.data.animation)}
+Overlay.Body = Component.extend({ // @TODO r-animation={@(this.$outer.data.animation)}
     name: 'overlay.body',
-    template: '<div class="overlay_bd" r-show={this.$outer.data.open}>{#inc this.$body}</div>',
+    template: bodyTemplate,
 });
 
 export default Overlay;

@@ -1,0 +1,1 @@
+<div class="overlay_bd" r-show={this.$outer.data.open}>{#inc this.$body}</div>
