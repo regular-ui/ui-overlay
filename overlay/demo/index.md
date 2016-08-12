@@ -91,7 +91,7 @@
 
 ```xml
 <overlay open={open}>
-    <overlay.head><a class="u-btn u-btn-info" r-class={ {'z-act': open} }>{open ? '展开' : '收起'}</a></overlay.head>
+    <overlay.head><a class="u-btn u-btn-info" z-act={open}>{open ? '展开' : '收起'}</a></overlay.head>
     <overlay.body><textarea class="u-textarea">body</textarea></overlay.body>
 </overlay>
 ```

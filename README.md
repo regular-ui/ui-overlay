@@ -21,15 +21,15 @@ Regular UI - Overlay, Popover, Tooltip
 
 ## Overlay（漂浮层）
 
-- 基础示例+API: https://regular-ui.github.io/ui-overlay/overlay/index.html
+- 基础示例+进阶案例+API: https://regular-ui.github.io/ui-overlay/overlay/index.html
 
 ## Tooltip（工具提示）
 
-- 基础示例+API: https://regular-ui.github.io/ui-overlay/tooltip/index.html
+- 基础示例+进阶案例+API: https://regular-ui.github.io/ui-overlay/tooltip/index.html
 
 ## Popover（气泡卡片）
 
-- 基础示例+API: https://regular-ui.github.io/ui-overlay/popover/index.html
+- 基础示例+进阶案例+API: https://regular-ui.github.io/ui-overlay/popover/index.html
 
 ## Copyright and License
 
