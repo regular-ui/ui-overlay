@@ -23,12 +23,12 @@ const Overlay = Component.extend({
      * @override
      */
     config() {
-        this.data = Object.assign({
+        this.defaults({
             open: false,
             trigger: 'click',
             direction: 'bottom-left',
             // @TODO animation: 'on: enter; class: animated fadeInY fast; on: leave; class: animated fadeOutY fast;',
-        }, this.data);
+        });
         this.supr();
         this.watch();
     },
