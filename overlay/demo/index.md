@@ -110,3 +110,16 @@
     <overlay.body><textarea class="u-textarea">body</textarea></overlay.body>
 </overlay>
 ```
+
+
+## 案例
+### 使用样式来处理hover
+
+<div class="m-example"></div>
+
+```xml
+<overlay class="u-overlay-hover">
+    <overlay.head><a class="u-btn u-btn-warning">hover</a></overlay.head>
+    <overlay.body><textarea class="u-textarea">body</textarea></overlay.body>
+</overlay>
+```

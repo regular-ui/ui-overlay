@@ -16,6 +16,12 @@
 // Extends:
 // ========================================================================
 
+.u-overlay-hover {
+    &:hover {
+        .overlay_bd { display: block; }
+    }
+}
+
 /* top-left, top-center, top-right, bottom-left, bottom-center, bottom-right */
 
 .u-overlay-top-left {
@@ -28,7 +34,8 @@
 .u-overlay-top-center {
     .overlay_bd {
         bottom: 100%;
-        left: 0;
+        left: 50%;
+        $transform: translateX(-50%);
     }
 }
 
@@ -49,7 +56,8 @@
 .u-overlay-bottom-center {
     .overlay_bd {
         top: 100%;
-        left: 0;
+        left: 50%;
+        $transform: translateX(-50%);
     }
 }
 
@@ -83,7 +91,8 @@
 .u-overlay-left-center {
     .overlay_bd {
         right: 100%;
-        top: 0;
+        top: 50%;
+        $transform: translateY(-50%);
     }
 }
 
@@ -104,7 +113,8 @@
 .u-overlay-right-center {
     .overlay_bd {
         left: 100%;
-        top: 0;
+        top: 50%;
+        $transform: translateY(-50%);
     }
 }
 
