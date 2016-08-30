@@ -34,7 +34,7 @@
 </div>
 <div class="g-bd"><div class="g-bdc"><div class="g-mn g-mn-center">
     <article class="m-article">
-        <h1><small> Overlay</small></h1>
+        <h1>漂浮层<small> Overlay</small></h1>
         <h2 id="示例">示例</h2>
 <h3 id="基本形式">基本形式</h3>
 <div class="m-example"></div>
@@ -117,7 +117,7 @@
 <div class="m-example"></div>
 
 <pre class="lang-xml"><code><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay</span> <span class="cm-attribute">open</span>=<span class="cm-attribute">{open}</span><span class="cm-tagcm-bracketcm-error">&gt;</span>
-    <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay.head</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-btn u-btn-info&quot;</span> <span class="cm-attribute">r-class</span>=<span class="cm-attribute">{</span> <span class="cm-attribute">{</span><span class="cm-stringcm-error">&#39;z-act&#39;</span><span class="cm-attribute">:</span> <span class="cm-attribute">open}</span> <span class="cm-attribute">}</span><span class="cm-tagcm-bracketcm-error">&gt;</span>{open ? &#39;展开&#39; : &#39;收起&#39;}<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">overlay.head</span><span class="cm-tagcm-bracket">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay.head</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-btn u-btn-info&quot;</span> <span class="cm-attribute">z-act</span>=<span class="cm-attribute">{open}</span><span class="cm-tagcm-bracketcm-error">&gt;</span>{open ? &#39;展开&#39; : &#39;收起&#39;}<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">overlay.head</span><span class="cm-tagcm-bracket">&gt;</span>
     <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay.body</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">textarea</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-textarea&quot;</span><span class="cm-tagcm-bracket">&gt;</span>body<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">textarea</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">overlay.body</span><span class="cm-tagcm-bracket">&gt;</span>
 <span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">overlay</span><span class="cm-tagcm-bracket">&gt;</span>
 </code></pre>
@@ -129,6 +129,15 @@
     <span class="cm-attribute">on-toggle</span>=<span class="cm-attribute">{console.log(</span><span class="cm-stringcm-error">&#39;on-toggle:&#39;</span><span class="cm-attribute">,</span> <span class="cm-stringcm-error">&#39;$event.open:&#39;</span><span class="cm-attribute">,</span> <span class="cm-attribute">$event.open)}</span>
     <span class="cm-attribute">on-change</span>=<span class="cm-attribute">{console.log(</span><span class="cm-stringcm-error">&#39;on-change:&#39;</span><span class="cm-attribute">,</span> <span class="cm-stringcm-error">&#39;$event.open:&#39;</span><span class="cm-attribute">,</span> <span class="cm-attribute">$event.open)}</span><span class="cm-tagcm-bracketcm-error">&gt;</span>
     <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay.head</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-btn u-btn-primary&quot;</span><span class="cm-tagcm-bracket">&gt;</span>head<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">overlay.head</span><span class="cm-tagcm-bracket">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay.body</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">textarea</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-textarea&quot;</span><span class="cm-tagcm-bracket">&gt;</span>body<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">textarea</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">overlay.body</span><span class="cm-tagcm-bracket">&gt;</span>
+<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">overlay</span><span class="cm-tagcm-bracket">&gt;</span>
+</code></pre>
+<h2 id="案例">案例</h2>
+<h3 id="使用样式来处理hover">使用样式来处理hover</h3>
+<div class="m-example"></div>
+
+<pre class="lang-xml"><code><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-overlay-hover&quot;</span><span class="cm-tagcm-bracket">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay.head</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-btn u-btn-warning&quot;</span><span class="cm-tagcm-bracket">&gt;</span>hover<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">overlay.head</span><span class="cm-tagcm-bracket">&gt;</span>
     <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay.body</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">textarea</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-textarea&quot;</span><span class="cm-tagcm-bracket">&gt;</span>body<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">textarea</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">overlay.body</span><span class="cm-tagcm-bracket">&gt;</span>
 <span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">overlay</span><span class="cm-tagcm-bracket">&gt;</span>
 </code></pre>
@@ -302,7 +311,7 @@ var index = 0;
     component && component.$inject($$(".m-example")[index]);
 })(index++);
 (function (index) {
-    var template = "<overlay open={open}>\n    <overlay.head><a class=\"u-btn u-btn-info\" r-class={ {'z-act': open} }>{open ? '展开' : '收起'}</a></overlay.head>\n    <overlay.body><textarea class=\"u-textarea\">body</textarea></overlay.body>\n</overlay>";
+    var template = "<overlay open={open}>\n    <overlay.head><a class=\"u-btn u-btn-info\" z-act={open}>{open ? '展开' : '收起'}</a></overlay.head>\n    <overlay.body><textarea class=\"u-textarea\">body</textarea></overlay.body>\n</overlay>";
     var component = new RGUI.Component({
         template: template
     });
@@ -310,6 +319,13 @@ var index = 0;
 })(index++);
 (function (index) {
     var template = "<overlay\n    on-toggle={console.log('on-toggle:', '$event.open:', $event.open)}\n    on-change={console.log('on-change:', '$event.open:', $event.open)}>\n    <overlay.head><a class=\"u-btn u-btn-primary\">head</a></overlay.head>\n    <overlay.body><textarea class=\"u-textarea\">body</textarea></overlay.body>\n</overlay>";
+    var component = new RGUI.Component({
+        template: template
+    });
+    component && component.$inject($$(".m-example")[index]);
+})(index++);
+(function (index) {
+    var template = "<overlay class=\"u-overlay-hover\">\n    <overlay.head><a class=\"u-btn u-btn-warning\">hover</a></overlay.head>\n    <overlay.body><textarea class=\"u-textarea\">body</textarea></overlay.body>\n</overlay>";
     var component = new RGUI.Component({
         template: template
     });
