@@ -85,6 +85,17 @@
 </overlay>
 ```
 
+### 禁用
+
+<div class="m-example"></div>
+
+```xml
+<overlay disabled>
+    <overlay.head><a class="u-btn z-dis">disabled</a></overlay.head>
+    <overlay.body><textarea class="u-textarea">body</textarea></overlay.body>
+</overlay>
+```
+
 ### 数据绑定
 
 <div class="m-example"></div>

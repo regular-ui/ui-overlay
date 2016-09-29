@@ -11,6 +11,7 @@ import { dom } from 'regularjs';
  * @param {boolean=false}           options.data.open               <=> 当前为展开/收起状态
  * @param {string='click'}          options.data.trigger             => 触发方式。支持3种方式：`click`, `dblclick`, `hover`，默认为`click`。
  * @param {string='bottom-left'}    options.data.direction           => 展开方向。有12种方向：`top-left`, `top-center`, `top-right`, `bottom-left`, `bottom-center`, `bottom-right`, `left-top`, `left-center`, `left-bottom`, `right-top`, `right-center`, `right-bottom`，默认为`bottom-left`。
+ * @param {boolean=false}           options.data.readonly            => 是否只读
  * @param {boolean=false}           options.data.disabled            => 是否禁用
  * @param {boolean=true}            options.data.visible             => 是否显示
  * @param {string=''}               options.data.class               => 补充class
@@ -76,7 +77,7 @@ const Overlay = Component.extend({
      * @return {void}
      */
     toggle(open) {
-        if (this.data.disabled)
+        if (this.data.readonly || this.data.disabled)
             return;
 
         if (open === undefined)
