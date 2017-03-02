@@ -11,7 +11,7 @@
   "keywords": ["regular", "ui", "rgui", "overlay", "tooltip", "popover"],
   "tags": ["regular", "ui", "rgui", "overlay", "tooltip", "popover"],
   "dependencies": {
-    "rgui-ui-base": "^0.2.0-alpha.5"
+    "rgui-ui-base": "^0.2.0"
   },
   "peerDependencies": {
     "regularjs": "^0.4.3"

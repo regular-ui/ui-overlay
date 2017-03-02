@@ -28,7 +28,7 @@ $u-tooltip_triangle_offset ?= 10px;
 .u-tooltip-top-left,
 .u-tooltip-top-center,
 .u-tooltip-top-right {
-    bottom: $u-tooltip_triangle_size;
+    margin-bottom: $u-tooltip_triangle_size;
 
     &:after {
         bottom: -$u-tooltip_triangle_size;
@@ -41,7 +41,7 @@ $u-tooltip_triangle_offset ?= 10px;
 .u-tooltip-bottom-left,
 .u-tooltip-bottom-center,
 .u-tooltip-bottom-right {
-    top: $u-tooltip_triangle_size;
+    margin-top: $u-tooltip_triangle_size;
 
     &:after {
         top: -$u-tooltip_triangle_size;
@@ -70,7 +70,7 @@ $u-tooltip_triangle_offset ?= 10px;
 .u-tooltip-left-top,
 .u-tooltip-left-center,
 .u-tooltip-left-bottom {
-    right: $u-tooltip_triangle_size;
+    margin-right: $u-tooltip_triangle_size;
 
     &:after {
         right: -$u-tooltip_triangle_size;
@@ -83,7 +83,7 @@ $u-tooltip_triangle_offset ?= 10px;
 .u-tooltip-right-top,
 .u-tooltip-right-center,
 .u-tooltip-right-bottom {
-    left: $u-tooltip_triangle_size;
+    margin-left: $u-tooltip_triangle_size;
 
     &:after {
         left: -$u-tooltip_triangle_size;

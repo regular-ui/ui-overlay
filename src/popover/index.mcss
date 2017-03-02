@@ -44,7 +44,7 @@ $m-popover_triangle_offset-outer = $m-popover_triangle_offset - $m-popover_borde
 .m-popover-top-left,
 .m-popover-top-center,
 .m-popover-top-right {
-    bottom: $m-popover_triangle_size;
+    margin-bottom: $m-popover_triangle_size;
 
     &:before, &:after {
         border-bottom: none;
@@ -59,7 +59,7 @@ $m-popover_triangle_offset-outer = $m-popover_triangle_offset - $m-popover_borde
 .m-popover-bottom-left,
 .m-popover-bottom-center,
 .m-popover-bottom-right {
-    top: $m-popover_triangle_size-outer;
+    margin-top: $m-popover_triangle_size;
 
     &:before, &:after {
         border-top: none;
@@ -93,7 +93,7 @@ $m-popover_triangle_offset-outer = $m-popover_triangle_offset - $m-popover_borde
 .m-popover-left-top,
 .m-popover-left-center,
 .m-popover-left-bottom {
-    right: $m-popover_triangle_size;
+    margin-right: $m-popover_triangle_size;
 
     &:before, &:after {
         border-right: none;
@@ -108,7 +108,7 @@ $m-popover_triangle_offset-outer = $m-popover_triangle_offset - $m-popover_borde
 .m-popover-right-top,
 .m-popover-right-center,
 .m-popover-right-bottom {
-    left: $m-popover_triangle_size;
+    margin-left: $m-popover_triangle_size;
 
     &:before, &:after {
         border-left: none;

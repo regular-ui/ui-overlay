@@ -1,3 +1,3 @@
-import Overlay from './overlay';
+import Overlay from './src/overlay';
 
 export { Overlay };

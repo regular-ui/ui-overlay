@@ -6,10 +6,10 @@ import { dom } from 'regularjs';
 
 /**
  * @class Overlay
- * @extend Component
- * @param {object}                  options.data                     =  绑定属性
+ * @extends Component
+ * @param {Object}                  options.data                     =  绑定属性
  * @param {boolean=false}           options.data.open               <=> 当前为展开/收起状态
- * @param {string='click'}          options.data.trigger             => 触发方式。支持3种方式：`click`, `dblclick`, `hover`，默认为`click`。
+ * @param {string='click'}          options.data.trigger             => 触发方式。支持3种方式：`click`, `dblclick`, `hover`，默认为`click`。空表示不自动触发。
  * @param {string='bottom-left'}    options.data.direction           => 展开方向。有12种方向：`top-left`, `top-center`, `top-right`, `bottom-left`, `bottom-center`, `bottom-right`, `left-top`, `left-center`, `left-bottom`, `right-top`, `right-center`, `right-bottom`，默认为`bottom-left`。
  * @param {boolean=false}           options.data.readonly            => 是否只读
  * @param {boolean=false}           options.data.disabled            => 是否禁用
@@ -38,12 +38,12 @@ const Overlay = Component.extend({
      * @override
      */
     watch() {
-        this.$watch('open', (newValue, oldValue) => {
+        this.$watch('open', (open) => {
             // 根据状态在Overlay.opens列表中添加/删除管理项
             const index = Overlay.opens.indexOf(this);
-            if (newValue && index < 0)
+            if (open && index < 0)
                 Overlay.opens.push(this);
-            else if (!newValue && index >= 0)
+            else if (!open && index >= 0)
                 Overlay.opens.splice(index, 1);
 
             /**
@@ -55,7 +55,7 @@ const Overlay = Component.extend({
              */
             this.$emit('change', {
                 sender: this,
-                open: newValue,
+                open,
                 trigger: this.data.trigger,
                 direction: this.data.direction,
             });
