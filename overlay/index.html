@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <link rel="icon" href="https://regular-ui.github.io/v0.2/img/favicon.ico" type="image/x-icon">
 <link rel="shortcut icon" href="https://regular-ui.github.io/v0.2/img/favicon.ico" type="image/x-icon">
-<link rel="stylesheet" href="https://regular-ui.github.io/v0.2/css/doc.default.min.css">
+<link rel="stylesheet" href="https://regular-ui.github.io/v0.2/css/docs.default.min.css">
 <link rel="stylesheet" href="../css/index.css">
 <!--[if lt IE9]>
 <script>
@@ -113,6 +113,14 @@
     <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay.body</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">textarea</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-textarea&quot;</span><span class="cm-tagcm-bracket">&gt;</span>body<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">textarea</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">overlay.body</span><span class="cm-tagcm-bracket">&gt;</span>
 <span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">overlay</span><span class="cm-tagcm-bracket">&gt;</span>
 </code></pre>
+<h3 id="禁用">禁用</h3>
+<div class="m-example"></div>
+
+<pre class="lang-xml"><code><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay</span> <span class="cm-attribute">disabled</span><span class="cm-tagcm-bracketcm-error">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay.head</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-btn z-dis&quot;</span><span class="cm-tagcm-bracket">&gt;</span>disabled<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">overlay.head</span><span class="cm-tagcm-bracket">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">overlay.body</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">textarea</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-textarea&quot;</span><span class="cm-tagcm-bracket">&gt;</span>body<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">textarea</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">overlay.body</span><span class="cm-tagcm-bracket">&gt;</span>
+<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">overlay</span><span class="cm-tagcm-bracket">&gt;</span>
+</code></pre>
 <h3 id="数据绑定">数据绑定</h3>
 <div class="m-example"></div>
 
@@ -144,38 +152,42 @@
 
         <h2 id="API">API</h2>
 
-<h3 id="Class">Class</h3>
-<h4>Overlay</h4>
-<p>继承自<strong>Component</strong>。</p>
-<p></p>
-<div id="j-class"></div>
 
-<h3 id="Options">Options</h3>
-<h4>new Overlay()</h4>
-<table>
-    <thead>
-        <tr><th width="24%">参数</th><th width="16%">类型</th><th width="16%">默认值</th><th width="18%">数据流向</th><th width="26%">描述</th></tr>
-    </thead>
-    <tbody>
-        
+    <h3 id="Class">Class</h3>
+    <h4>Overlay</h4>
+    <p>继承自<strong></strong>。</p>
+    <p></p>
+    <div id="j-class"></div>
+
+    <h3 id="Options">Options</h3>
+    <h4>new Overlay()</h4>
+    <table>
+        <thead>
+            <tr><th width="24%">参数</th><th width="16%">类型</th><th width="16%">默认值</th><th width="18%">数据流向</th><th width="26%">描述</th></tr>
+        </thead>
+        <tbody>
             
-            <tr><td class="f-wsn"><code>data</code></td><td class="f-wsn">object</td><td class="f-wsn"></td><td class="f-tac"></td><td>绑定属性</td></tr>
+                
+                <tr><td class="f-wsn"><code>data</code></td><td class="f-wsn">Object</td><td class="f-wsn"></td><td class="f-tac"></td><td>绑定属性</td></tr>
+                
+                <tr><td class="f-wsn"><code>data.open</code></td><td class="f-wsn">boolean</td><td class="f-wsn"><code>false</code></td><td class="f-tac">outside &lt;=&gt; inside</td><td>当前为展开/收起状态</td></tr>
+                
+                <tr><td class="f-wsn"><code>data.trigger</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;click&#39;</code></td><td class="f-tac">outside  =&gt; inside</td><td>触发方式。支持3种方式：`click`, `dblclick`, `hover`，默认为`click`。空表示不自动触发。</td></tr>
+                
+                <tr><td class="f-wsn"><code>data.direction</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;bottom-left&#39;</code></td><td class="f-tac">outside  =&gt; inside</td><td>展开方向。有12种方向：`top-left`, `top-center`, `top-right`, `bottom-left`, `bottom-center`, `bottom-right`, `left-top`, `left-center`, `left-bottom`, `right-top`, `right-center`, `right-bottom`，默认为`bottom-left`。</td></tr>
+                
+                <tr><td class="f-wsn"><code>data.readonly</code></td><td class="f-wsn">boolean</td><td class="f-wsn"><code>false</code></td><td class="f-tac">outside  =&gt; inside</td><td>是否只读</td></tr>
+                
+                <tr><td class="f-wsn"><code>data.disabled</code></td><td class="f-wsn">boolean</td><td class="f-wsn"><code>false</code></td><td class="f-tac">outside  =&gt; inside</td><td>是否禁用</td></tr>
+                
+                <tr><td class="f-wsn"><code>data.visible</code></td><td class="f-wsn">boolean</td><td class="f-wsn"><code>true</code></td><td class="f-tac">outside  =&gt; inside</td><td>是否显示</td></tr>
+                
+                <tr><td class="f-wsn"><code>data.class</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;&#39;</code></td><td class="f-tac">outside  =&gt; inside</td><td>补充class</td></tr>
+                
             
-            <tr><td class="f-wsn"><code>data.open</code></td><td class="f-wsn">boolean</td><td class="f-wsn"><code>false</code></td><td class="f-tac">outside &lt;=&gt; inside</td><td>当前为展开/收起状态</td></tr>
-            
-            <tr><td class="f-wsn"><code>data.trigger</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;click&#39;</code></td><td class="f-tac">outside  =&gt; inside</td><td>触发方式。支持3种方式：`click`, `dblclick`, `hover`，默认为`click`。</td></tr>
-            
-            <tr><td class="f-wsn"><code>data.direction</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;bottom-left&#39;</code></td><td class="f-tac">outside  =&gt; inside</td><td>展开方向。有12种方向：`top-left`, `top-center`, `top-right`, `bottom-left`, `bottom-center`, `bottom-right`, `left-top`, `left-center`, `left-bottom`, `right-top`, `right-center`, `right-bottom`，默认为`bottom-left`。</td></tr>
-            
-            <tr><td class="f-wsn"><code>data.disabled</code></td><td class="f-wsn">boolean</td><td class="f-wsn"><code>false</code></td><td class="f-tac">outside  =&gt; inside</td><td>是否禁用</td></tr>
-            
-            <tr><td class="f-wsn"><code>data.visible</code></td><td class="f-wsn">boolean</td><td class="f-wsn"><code>true</code></td><td class="f-tac">outside  =&gt; inside</td><td>是否显示</td></tr>
-            
-            <tr><td class="f-wsn"><code>data.class</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;&#39;</code></td><td class="f-tac">outside  =&gt; inside</td><td>补充class</td></tr>
-            
-        
-    </tbody>
-</table>
+        </tbody>
+    </table>
+
 <div id="j-options"></div>
 
 
@@ -311,7 +323,14 @@ var index = 0;
     component && component.$inject($$(".m-example")[index]);
 })(index++);
 (function (index) {
-    var template = "<overlay open={open}>\n    <overlay.head><a class=\"u-btn u-btn-info\" z-act={open}>{open ? '展开' : '收起'}</a></overlay.head>\n    <overlay.body><textarea class=\"u-textarea\">body</textarea></overlay.body>\n</overlay>";
+    var template = "<overlay disabled>\n    <overlay.head><a class=\"u-btn z-dis\">disabled</a></overlay.head>\n    <overlay.body><textarea class=\"u-textarea\">body</textarea></overlay.body>\n</overlay>";
+    var component = new RGUI.Component({
+        template: template
+    });
+    component && component.$inject($$(".m-example")[index]);
+})(index++);
+(function (index) {
+    var template = "<overlay open={open}>\n    <overlay.head><a class=\"u-btn u-btn-info\" z-act={open}>{open ? '\u5C55\u5F00' : '\u6536\u8D77'}</a></overlay.head>\n    <overlay.body><textarea class=\"u-textarea\">body</textarea></overlay.body>\n</overlay>";
     var component = new RGUI.Component({
         template: template
     });
