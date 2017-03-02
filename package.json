@@ -1,7 +1,7 @@
 {
   "name": "rgui-ui-overlay",
   "description": "Regular UI - Overlay, Popover, Tooltip",
-  "version": "0.2.0-alpha.2",
+  "version": "0.2.0",
   "author": "Rainfore <rainforest92@126.com>",
   "main": "./index.js",
   "repository": "regular-ui/ui-overlay",
